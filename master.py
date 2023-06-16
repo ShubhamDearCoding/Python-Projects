@@ -17,12 +17,14 @@ master_pwd = input("What is the master password? ")
 key = load_key() + master_pwd.encode()
 fer = Fernet(key)
 
-def view() :
-     with open('passwords.txt', 'r') as f:
-           for line in f.readlines():
+def view():
+    with open('passwords.txt', 'r') as f:
+            for line in f.readlines():
                 data = line.rstrip()
                 user, passw = data.split("|")
-                print("User:", user, "| Password:", str(fer.decrypt(passw.encode())) + "\n")
+                decrypted_passw = fer.decrypt(passw.encode())  # Assuming `fer` is defined elsewhere
+                print("User:", user, "| Password:", decrypted_passw)
+                # print("User:", user, "| Password:", str(fer.decrypt(passw.encode())) + "    \n")
      
 def add():
     name = input('Account name: ') 
