@@ -1,8 +1,9 @@
-def greet_user(first_name, last_name):
-    print(f'hi {first_name},{last_name}! ')
-    print('welcome aboard ')
-    
-
-print("start")
-greet_user("john", "smith")
-print("finish")
+try:
+    age = int(input('Age: '))
+    income = 20000
+    risk = income/age 
+    print(age)
+except ZeroDivisionError:
+    print('Age cannot be 0.')
+except ValueError:
+    print('Invalid value')

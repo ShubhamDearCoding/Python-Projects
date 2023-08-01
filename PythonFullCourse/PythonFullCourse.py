@@ -345,6 +345,73 @@ print("start")
 greet_user("john", "smith")
 print("finish")
 
+def square(number):
+    print(number * number)
+
+
+print(square(3))
+
+def emoji converter(message):
+    words = message.split(' ')
+    emojis = {
+        ":)": "😁",
+        ":(": "😢"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
+
+
+message = input(">")
+print(emoji_converter(message))
+
+try:
+    age = int(input('Age: '))
+    income = 20000
+    risk = income/age 
+    print(age)
+except ValueError:
+    print('Invalid value')
+
+try:
+    age = int(input('Age: '))
+    income = 20000
+    risk = income/age 
+    print(age)
+except ZeroDivisionError:
+    print('Age cannot be 0.')
+except ValueError:
+    print('Invalid value')
+
+class Point:
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+point1 = point()
+point1.x = 10
+point1.y = 20
+print(point1.x)
+point.draw()
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+
+point = Point(10, 20)
+point.x = 10
+print(point.x)  
 
 
 
