@@ -1,3 +1,4 @@
+from player import HumanPlayer
 
 class TicTacToe:
     def _init_(self):
@@ -99,3 +100,12 @@ class TicTacToe:
             o_player = RandomPlayerComputer('0')
             t = TicTacToe()
             play(t, x_player, o_player, print_game=True)                   
+
+                    
+
+                
+
+        
+
+            
+            

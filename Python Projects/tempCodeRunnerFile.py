@@ -1,12 +1,36 @@
-import random 
+print("Welcome to my computer quiz!")
 
-user_wins = 0
-computer_wins = 0
+playing = input("Do you want to play? ")
 
-options = ["rock", "paper", "scissors"]
+if playing.lower() != "yes":
+    quit()
 
+print("Okay let's play :)") 
+score = 0
 
-while True:
-    user_input("Type Rock/Paper/Scissors or Q to quit: ").lower()
-    if user_input == 'q':
-        break
+answer = input("What does WWW stand for? ")
+if answer.lower() == "world wide web":
+    print('Correct!')
+    score += 1
+else:
+    print("Incorrect!")
+# answer = "world wide Web"
+# answer = input()
+# print(answer.lower())
+# print(answer.lower() == "world wide web")
+
+answer = input("What does RAM stand for? ")
+if answer.lower() == "random access memories":
+    print('Correct!')
+    score += 1
+else:
+    print("Incorrect!")
+
+answer = input("what does CPU stands for? ")
+if answer.lower() == "central processing unit":
+    print('Correct!')
+    score += 1
+else:
+    print("Incorrect!")
+
+print("You got " + str(score) + " questions correct!")

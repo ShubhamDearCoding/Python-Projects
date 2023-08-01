@@ -34,4 +34,4 @@ elif answer == "right":
 else:
       print('Not a valid option. You loose.')  
 
-print("Thank you for trying", name)      
+print("Thank you for trying", name)    
