@@ -411,7 +411,7 @@ class Point:
 
 point = Point(10, 20)
 point.x = 10
-print(point.x)  
+print(point.x)
 
 
 
