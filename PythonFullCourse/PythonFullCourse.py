@@ -362,7 +362,6 @@ def emoji converter(message):
         output += emojis.get(word, word) + " "
     return output
 
-
 message = input(">")
 print(emoji_converter(message))
 
@@ -411,7 +410,10 @@ class Point:
 
 point = Point(10, 20)
 point.x = 10
-print(point.x)  
+print(point.x)
+
+
+
 
 
 
