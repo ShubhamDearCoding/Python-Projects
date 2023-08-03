@@ -412,6 +412,17 @@ point = Point(10, 20)
 point.x = 10
 print(point.x)
 
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def talk(self):
+        print(f"Hi, I am {self.name}")
+
+john = Person("John Smith")
+john.talk
+
+bob = Person("Bob Smith")
+bob.talk()
 
 
 
