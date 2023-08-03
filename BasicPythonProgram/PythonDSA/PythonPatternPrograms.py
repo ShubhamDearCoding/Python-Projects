@@ -332,7 +332,104 @@ class Person:
         
 john = Person("John Smith")
 print(john.name)
-john.talk()   
+john.talk()
+
+def print_pyramid(rows):
+    spaces = rows//2
+    stars = 1
+    for i in range(rows):
+        j = 1
+        while j <= spaces:
+            print(" ", end = "")
+            j += 1
+        print("*", end = "")
+        k = 1
+        while k <= stars:
+            print("*", end = "")
+            k += 1
+        if i <= rows//2:
+            spaces += 0
+            stars += 1
+        else:
+            spaces += 0
+            stars -= 1
+            print()
+        # print(print_pyramid(5))
+print_pyramid(5)
+
+
+def print_pyramid(rows):
+    stars = 1
+    spaces = 2
+    for i in range(rows):
+        if i == rows//2:
+            print("**",end = "")
+        else:
+            p = 1
+            while p <= spaces:
+                print(" ", end = "")
+                p += 1
+        j = 1
+        while j <= stars:
+            print("*", end = "")
+            j += 1
+        if i < rows//2:
+            stars += 1
+            spaces += 0
+        else:
+            stars -= 1
+            spaces += 0
+        # print(print_pyramid(5))
+        print()
+print_pyramid(500)
+
+def print_pyramid(rows):
+    stars = 1
+    up_outer_spaces = 1
+    down_outer_spaces = rows//2
+    inner_spaces = 3
+    # inner_spaces = 3
+    for i in range(rows):
+        if i == 0:
+            print(rows*"*")
+        else:
+            if i < rows//2:
+                p = 1
+                while p <= up_outer_spaces:
+                    print(" ", end = "")
+                    p += 1
+                j = 1
+                while j <= stars:
+                    print("*", end = "")
+                    j += 1
+                k = 1
+                while k <= inner_spaces:
+                    print(" ", end = "")
+                    k += 1
+                print('*')
+                up_outer_spaces += 1
+                inner_spaces -= 2
+            else:
+                p = 1
+                while p <= down_outer_spaces:
+                    print(" ", end = "")
+                    p += 1
+                j = 1
+                while j <= stars:
+                    print("*", end = "")
+                    j += 1
+                stars += 2
+                down_outer_spaces -= 1
+            # print(print_pyramid(5))
+                print()
+print_pyramid(7)
+
+ 
+
+
+
+
+
 
 
 
